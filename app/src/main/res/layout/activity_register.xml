@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="24dp"
+    android:orientation="vertical"
     android:paddingLeft="24dp"
-    android:paddingRight="24dp">
+    android:paddingRight="24dp"
+    android:paddingTop="24dp">
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="80dp"
-        android:src="@mipmap/ic_launcher"
-        android:layout_gravity="center_horizontal"/>
+        android:layout_gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher" />
 
     <!--name-->
+
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
         <EditText
             android:id="@+id/txt_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textCapWords"
-            android:hint="Name"/>
+            android:hint="Name"
+            android:inputType="textCapWords" />
     </android.support.design.widget.TextInputLayout>
 
     <!-- email -->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp">
         <EditText
             android:id="@+id/txt_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="email"/>
+            android:hint="email"
+            android:inputType="textEmailAddress" />
     </android.support.design.widget.TextInputLayout>
 
     <!-- password -->
@@ -47,33 +48,44 @@
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:passwordToggleEnabled="false"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        app:passwordToggleEnabled="false">
         <EditText
             android:id="@+id/txt_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Password"/>
+            android:hint="Password"
+            android:inputType="textPassword" />
     </android.support.design.widget.TextInputLayout>
 
     <!-- password -->
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:passwordToggleEnabled="false"
+        android:layout_marginBottom="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp">
+        app:passwordToggleEnabled="false">
+
         <EditText
             android:id="@+id/txt_confirm_pwd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Confirm Password"/>
+            android:hint="Confirm Password"
+            android:inputType="textPassword" />
     </android.support.design.widget.TextInputLayout>
 
     <!-- sign up button -->
+    <Spinner
+        android:id="@+id/spinner"
+        style="@style/Widget.AppCompat.Light.Spinner.DropDown.ActionBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        android:gravity="center_vertical|center"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp" />
+
     <android.support.v7.widget.AppCompatButton
         android:id="@+id/btn_signup"
         android:layout_width="fill_parent"
@@ -89,8 +101,8 @@
         android:id="@+id/link_signin"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Already a member? Login"
-        android:gravity="center"/>
+        android:gravity="center"
+        android:text="Already a member? Login" />
 
     <ProgressBar
         android:id="@+id/progressBar"
