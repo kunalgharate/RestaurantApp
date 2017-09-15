@@ -53,6 +53,8 @@ public class RegisterActivity extends AppCompatActivity {
 
         final Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
+        //getSupportActionBar().setDisplayShowHomeEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         // Initializing a String Array
         String[] plants = new String[]{
                 "Select an item...",
