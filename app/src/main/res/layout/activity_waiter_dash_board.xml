@@ -1,8 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.amlidaz.restaurantapp.WaiterDashBoard">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
 
-</android.support.constraint.ConstraintLayout>
+    <ViewStub
+        android:id="@+id/vsHeader"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:inflatedId="@+id/header"
+        android:layout="@layout/header" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="6dip">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/main_btn_eclair"
+                style="@style/HomeButton"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:onClick="onButtonClicker"
+                android:text="Activity 1" />
+
+            <Button
+                android:id="@+id/main_btn_froyo"
+                style="@style/HomeButton"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:onClick="onButtonClicker"
+                android:text="activity2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/main_btn_gingerbread"
+                style="@style/HomeButton"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:onClick="onButtonClicker"
+                android:text="activity3" />
+
+            <Button
+                android:id="@+id/main_btn_honeycomb"
+                style="@style/HomeButton"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:onClick="onButtonClicker"
+                android:text="activity4" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/main_btn_ics"
+                style="@style/HomeButton"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:onClick="onButtonClicker"
+                android:text="activity5" />
+
+            <Button
+                android:id="@+id/main_btn_jellybean"
+                style="@style/HomeButton"
+                android:drawableTop="@mipmap/ic_launcher"
+                android:onClick="onButtonClicker"
+                android:text="activity6" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
