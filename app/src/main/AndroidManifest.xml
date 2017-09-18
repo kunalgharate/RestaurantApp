@@ -30,7 +30,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".RecipeCategories"></activity>
+        <activity
+            android:name=".RecipeCategories"
+            android:parentActivityName=".WaiterDashBoard"
+            android:theme="@style/AppThemett"></activity>
     </application>
 
 </manifest>
