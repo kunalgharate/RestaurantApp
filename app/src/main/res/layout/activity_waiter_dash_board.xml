@@ -25,7 +25,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/main_btn_eclair"
+                android:id="@+id/waitermenu"
                 style="@style/HomeButton"
                 android:drawableTop="@mipmap/ic_launcher"
                 android:onClick="onButtonClicker"

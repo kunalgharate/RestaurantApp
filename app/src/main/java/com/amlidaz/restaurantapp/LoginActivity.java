@@ -182,7 +182,7 @@ public class LoginActivity extends AppCompatActivity {
                             // signed in user can be handled in the listener.
                             if (task.isSuccessful()) {
 
-                                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                                startActivity(new Intent(LoginActivity.this, WaiterDashBoard.class));
                                 finish();
 
                             } else {
