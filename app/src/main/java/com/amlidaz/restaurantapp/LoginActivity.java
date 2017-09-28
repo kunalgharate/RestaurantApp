@@ -1,5 +1,6 @@
 package com.amlidaz.restaurantapp;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -39,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText txtEmail, txtPassword;
     Button btnLogin;
     String email, password;
+    ProgressDialog progressDialog;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private ProgressBar progressBar;
@@ -52,7 +54,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         mAuth = FirebaseAuth.getInstance();
-
+        progressDialog = new ProgressDialog(this);
         linkSignup = (TextView) findViewById(R.id.link_signup);
         reset_pass = (TextView) findViewById(R.id.txtforgot_pass);
         txtEmail = (EditText) findViewById(R.id.input_email);
@@ -131,6 +133,9 @@ public class LoginActivity extends AppCompatActivity {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
                     // User is signed in
+                    Intent intent = new Intent(LoginActivity.this, WaiterDashBoard.class);
+                    startActivity(intent);
+                    finish();
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
                     // User is signed out
@@ -166,8 +171,11 @@ public class LoginActivity extends AppCompatActivity {
                     txtPassword.setError("This field is required!");
                 } else {
 
-                    progressBar.setVisibility(View.VISIBLE);
 
+                    progressDialog.setTitle("Login");
+                    progressDialog.setMessage("Please wait");
+                    progressDialog.show();
+                    progressDialog.setCanceledOnTouchOutside(false);
                     email = txtEmail.getText().toString();
                     password = txtPassword.getText().toString();
 
@@ -181,17 +189,18 @@ public class LoginActivity extends AppCompatActivity {
                             // the auth state listener will be notified and logic to handle the
                             // signed in user can be handled in the listener.
                             if (task.isSuccessful()) {
-
+                                progressDialog.dismiss();
                                 startActivity(new Intent(LoginActivity.this, WaiterDashBoard.class));
                                 finish();
 
                             } else {
                                 Toast.makeText(LoginActivity.this, "Login Failed", Toast.LENGTH_SHORT).show();
+                                progressDialog.dismiss();
                             }
                         }
                     });
 
-                    progressBar.setVisibility(View.GONE);
+
                 }
 
             }

@@ -2,6 +2,7 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:fitsSystemWindows="true">
@@ -19,7 +20,8 @@
             android:layout_height="72dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="24dp"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            tools:ignore="ContentDescription" />
 
 
         <!-- email label-->
@@ -31,7 +33,7 @@
             <EditText android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="@string/email"
                 android:inputType="textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
 
@@ -49,7 +51,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusableInTouchMode="true"
-                android:hint="password"
+                android:hint="@string/password"
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
                 android:maxLines="1"
@@ -65,10 +67,11 @@
             android:layout_marginLeft="60dp"
             android:gravity="center_vertical|center"
             android:paddingLeft="3dp"
-            android:paddingRight="3dp" />
+            android:paddingRight="3dp"
+            tools:ignore="RtlHardcoded" />
 
 
-        <android.support.v7.widget.AppCompatButton
+        <Button
             android:id="@+id/btn_login"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -76,7 +79,7 @@
             android:layout_marginTop="24dp"
             android:background="@color/btn_login_register"
             android:padding="12dp"
-            android:text="Login"
+            android:text="@string/login"
             android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
         <TextView
@@ -84,7 +87,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:text="Forgot password"
+            android:text="@string/forgot_password"
             android:textColor="@color/btn_logut"
             android:textSize="18sp" />
 
@@ -95,16 +98,7 @@
             android:layout_marginBottom="24dp"
             android:layout_marginTop="60dp"
             android:gravity="center"
-            android:text="No account yet? Create one"
+            android:text="@string/no_account_yet_create_one"
             android:textSize="18sp" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_gravity="center|bottom"
-            android:layout_marginBottom="10dp"
-            android:visibility="gone" />
-
     </LinearLayout>
 </ScrollView>

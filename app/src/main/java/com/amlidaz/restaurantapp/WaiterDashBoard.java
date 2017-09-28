@@ -16,8 +16,16 @@ public class WaiterDashBoard extends AppCompatActivity {
     }
 
     public void onButtonClicker(View view) {
-        startActivity(new Intent(WaiterDashBoard.this, RecipeCategories.class));
-        finish();
 
+        switch (view.getId()) {
+            case R.id.waitermenu:
+                startActivity(new Intent(WaiterDashBoard.this, RecipeCategories.class));
+                finish();
+                break;
+            case R.id.upload_item:
+                startActivity(new Intent(WaiterDashBoard.this, adminUploadNewItem.class));
+                finish();
+                break;
+        }
     }
 }

@@ -14,7 +14,7 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".LoginActivity"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".RegisterActivity"
             android:parentActivityName=".LoginActivity"
@@ -22,7 +22,9 @@
         <activity android:name=".Reset_password" />
         <activity android:name=".AdminDashboard" />
         <activity android:name=".ChefDashboard" />
-        <activity android:name=".WaiterDashBoard" />
+        <activity
+            android:name=".WaiterDashBoard"
+            android:theme="@style/AppThemett" />
         <activity android:name=".SplashScreenActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,8 +34,8 @@
         </activity>
         <activity
             android:name=".RecipeCategories"
-            android:parentActivityName=".WaiterDashBoard"
-            android:theme="@style/AppThemett"></activity>
+            android:parentActivityName=".WaiterDashBoard"></activity>
+        <activity android:name=".adminUploadNewItem"></activity>
     </application>
 
 </manifest>
