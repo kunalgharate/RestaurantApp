@@ -34,8 +34,9 @@
         </activity>
         <activity
             android:name=".RecipeCategories"
-            android:parentActivityName=".WaiterDashBoard"></activity>
-        <activity android:name=".adminUploadNewItem"></activity>
+            android:parentActivityName=".WaiterDashBoard" />
+        <activity android:name=".adminUploadNewItem" />
+        <activity android:name=".AddProductType"></activity>
     </application>
 
 </manifest>
